@@ -83,11 +83,15 @@ public static void main(String[] args){
     App observable = new App();
     App.InnerApp_1 observer1 = observable.new InnerApp_1(); // Create an instance of InnerApp_1 using an instance of App
     App.InnerApp_2 observer2 = observable.new InnerApp_2(); // Create an instance of InnerApp_2 using an instance of App
+    
     observable.addObserver(observer1);
     observable.addObserver(observer2);
+    
     observable.setPlanet("Mars");
     observable.setPlanet("Jupiter");
+    
     observable.removeObserver(observer1);
+    
     observable.setPlanet("Saturn");
 }
 }
